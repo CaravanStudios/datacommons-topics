@@ -1,0 +1,625 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TechSoup Data Commons- Climate Topic Page</title>
+        <script src="https://datacommons.org/datacommons.js"></script>
+        <style>
+          .section {
+            display: flex; /* Arrange items horizontally within a section */
+            gap: 20px; /* Add spacing between visualizations */
+            margin-bottom: 40px; /* Add spacing between sections */
+          }
+    
+          /* Optional styling for individual visualizations */
+          datacommons-map,
+          datacommons-ranking {
+            height: 400px; /* Ensure consistent height */
+            width: 100%; /* Let the container control width */
+          }
+        </style>
+      </head>
+
+<body>
+<h1> Data Commons for Climate Change Organizations </h1>
+<p>Climate change organizations are weighing in and sharing the information they need to bolster their reach and
+    measure their impact. Read on to see how these organizations can benefit from public data, and don't forget to
+    <a href="https://survey.alchemer.com/s3/7341651/Data-Commons-your-data-your-needs">contribute</a> by sharing the
+    data or information that matters most to your organization.</p>
+
+<h3> Topics </h3>
+<h5> Land and Water Use, Observed Temperatures, Observed Emissions, Climate Hazards </h5>
+
+<h3>Land and Water Use</h3>
+<h2> Land Use </h2>
+<p>Over the course of human history, we have altered our local environments to suit our needs. The proportion of forests, 
+    bodies of water, protected lands, agricultural fields, are all examples of spaces that are constantly changing, 
+    some more than others. Tracking changes in land can be highly valuable when considering the great variety of climate 
+    change symptoms we face. The creation of land policy and management strategies to conserve and protect natural landscapes 
+    begin with considering data found in the following visualizations.</p>
+
+<br>
+
+<div class="section">
+    <div class="chart-container">
+        <datacommons-map
+        header="Percent of Forest Covered Area"
+        parentPlace="country/USA"
+        childPlaceType="State"
+        subscribe="dc-map"
+        variable="LandCoverFraction_Forest"
+     ></datacommons-map>
+        <datacommons-slider
+        publish="dc-map"
+        variable="LandCoverFraction_Forest"
+        parentPlace="country/USA"
+        childPlaceType="State"
+    ></datacommons-slider>
+    </div>
+
+    <div class="chart-container">   
+        <datacommons-ranking
+        header="US States with the Highest Percentage of Forest"
+        parentPlace="country/USA"
+        childPlaceType="State"
+        variable="LandCoverFraction_Forest"
+        showHighest
+        ></datacommons-ranking>
+    </div>
+
+    <div class="chart-container">   
+        <datacommons-ranking
+        header="US States with the Lowest Percentage of Forest"
+        parentPlace="country/USA"
+        childPlaceType="State"
+        variable="LandCoverFraction_Forest"
+        showLowest
+        ></datacommons-ranking>
+    </div>
+</div>
+
+<br>
+<hr>
+<br>
+
+<div class="section">
+    <div class="chart-container">
+        <datacommons-map
+        header="Percent of Permanent Water Covered Area"
+        parentPlace="country/USA"
+        childPlaceType="State"
+        subscribe="dc-map"
+        variable="LandCoverFraction_PermanentWater"
+    ></datacommons-map>
+        <datacommons-slider
+        publish="dc-map"
+        variable="LandCoverFraction_PermanentWater"
+        parentPlace="country/USA"
+        childPlaceType="State"
+        ></datacommons-slider>
+    </div>
+
+    <div class="chart-container">
+        <datacommons-ranking
+        header="US States with the Highest Percentage of Water Coverage"
+        parentPlace="country/USA"
+        childPlaceType="State"
+        variable="LandCoverFraction_PermanentWater"
+        showHighest
+        ></datacommons-ranking>
+    </div>
+
+    <div class="chart-container">
+        <datacommons-ranking
+        header="US States with the Lowest Percentage of Water Coverage"
+        parentPlace="country/USA"
+        childPlaceType="State"
+        variable="LandCoverFraction_PermanentWater"
+        showLowest
+        ></datacommons-ranking>
+    </div>
+</div>
+
+<br>
+<hr>
+<br>
+
+<div class="section">
+    <div class="chart-container">
+        <datacommons-map
+        header="Percent of Seasonal Water Covered Area"
+        parentPlace="country/USA"
+        childPlaceType="State"
+        subscribe="dc-map"
+        variable="LandCoverFraction_SeasonalWater"
+        ></datacommons-map>
+    <datacommons-slider
+        publish="dc-map"
+        variable="LandCoverFraction_SeasonalWater"
+        parentPlace="country/USA"
+        childPlaceType="State"
+        ></datacommons-slider>
+    </div>
+
+    <div class="chart-container">
+        <datacommons-ranking
+        header="US States with the Highest Percentage of Seasonal Water Coverage"
+        parentPlace="country/USA"
+        childPlaceType="State"
+        variable="LandCoverFraction_SeasonalWater"
+        showHighest
+        ></datacommons-ranking>
+    </div>
+
+    <div class="chart-container">
+        <datacommons-ranking
+        header="US States with the Lowest Percentage of Seasonal Water Coverage"
+        parentPlace="country/USA"
+        childPlaceType="State"
+        variable="LandCoverFraction_SeasonalWater"
+        showLowest
+        ></datacommons-ranking>
+    </div>
+</div>
+
+<br>
+<hr>
+<br>
+
+<h2> Water Use </h2>
+<p>Climate change is increasing the stressors on several of earth's water systems. Ground water and reservoirs
+     are driven to depletion through increased demand from a range of extractive processes including domestic and 
+     industry usage, and agricultural production. Several lakes in the United States are experiencing lower levels of water, 
+     intermittent dry events, and saltwater intrusion. Managing water withdrawal is an important effort to combat 
+     water scarcity in the face of accelerating climate change.</p>
+
+     <div class="section">
+        <div class="chart-container">
+            <datacommons-map
+            header="Rate of Water Withdrawal"
+            parentPlace="country/USA"
+            childPlaceType="State"
+            subscribe="dc-map"
+            variable="WithdrawalRate_Water"
+            ></datacommons-map>
+        <datacommons-slider
+            publish="dc-map"
+            variable="WithdrawalRate_Water"
+            parentPlace="country/USA"
+            childPlaceType="State"
+            ></datacommons-slider>
+        </div>
+    
+        <div class="chart-container">
+            <datacommons-ranking
+            header="US States with the Highest Rate of Water Withdrawal"
+            parentPlace="country/USA"
+            childPlaceType="State"
+            variable="WithdrawalRate_Water"
+            showHighest
+            ></datacommons-ranking>
+        </div>
+    
+        <div class="chart-container">
+            <datacommons-ranking
+            header="US States with the Lowest Rate of Water Withdrawal"
+            parentPlace="country/USA"
+            childPlaceType="State"
+            variable="WithdrawalRate_Water"
+            showLowest
+            ></datacommons-ranking>
+        </div>
+    </div>
+
+<br>
+<hr>
+<br>
+
+<h2> Observed Temperatures </h2>
+<p> According to the National Oceanic and Atmospheric Administration, Earth's temperature has risen 
+    at an average of 0.14 degrees Fahrenheit per decade since 1880. Having an authoritative, verifiable 
+    baseline for temperatures allows us to look at how temperature has changed so far, and use that information 
+    to create helpful climate models that project what temperatures could look like in the future.</p>
+
+<div class="section">
+    <div class="chart-container">
+        <datacommons-map
+        header="Mean Temperature"
+        parentPlace="country/USA"
+        childPlaceType="State"
+        subscribe="dc-map"
+        variable="Mean_Temperature"
+        ></datacommons-map>
+    <datacommons-slider
+        publish="dc-map"
+        variable="Mean_Temperature"
+        parentPlace="country/USA"
+        childPlaceType="State"
+        ></datacommons-slider>
+    </div>
+
+    <div class="chart-container">
+        <datacommons-line
+        header="Mean Temperature"
+        place="country/USA"
+        variables="Mean_Temperature"
+        colors="red"
+        ></datacommons-line>
+    </div>
+</div>
+
+<br>
+<hr>
+<br>
+
+<h2> Observed Emissions </h2>
+<p>As more greenhouse gasses (GHGs) occupy our atmosphere, the more our atmosphere will trap 
+    energy from the sun, increasing temperatures globally. Tracking emissions and their source is 
+    an integral part to managing our environmental footprint. The phrase "non biogenic emissions" 
+    refers to any emissions that do not come from a natural source. There are several natural sources 
+    of Carbon Dioxide, methane, and other greenhouse gasses. However, human activities contribute a 
+    significantly larger amount of GHG emissions to our atmosphere, and are highlighted in the 
+    following visualizations.</p>
+
+    <div class="section">
+        <div class="chart-container">
+            <datacommons-map
+            header="Annual Emissions of Non Biogenic Greenhouse Gases"
+            parentPlace="country/USA"
+            childPlaceType="State"
+            subscribe="dc-map"
+            variable="Annual_Emissions_GreenhouseGas_NonBiogenic"
+         ></datacommons-map>
+            <datacommons-slider
+            publish="dc-map"
+            variable="Annual_Emissions_GreenhouseGas_NonBiogenic"
+            parentPlace="country/USA"
+            childPlaceType="State"
+        ></datacommons-slider>
+        </div>
+    
+        <div class="chart-container">   
+            <datacommons-ranking
+            header="Highest Annual Emissions of Non Biogenic Greenhouse Gases"
+            parentPlace="country/USA"
+            childPlaceType="State"
+            variable="Annual_Emissions_GreenhouseGas_NonBiogenic"
+            showHighest
+            ></datacommons-ranking>
+        </div>
+    
+        <div class="chart-container">   
+            <datacommons-ranking
+            header="Lowest Annual Emissions of Non Biogenic Greenhouse Gases"
+            parentPlace="country/USA"
+            childPlaceType="State"
+            variable="Annual_Emissions_GreenhouseGas_NonBiogenic"
+            showLowest
+            ></datacommons-ranking>
+        </div>
+    </div>
+
+<br>
+<hr>
+<br>
+
+<div class="section">
+    <div class="chart-container">
+        <datacommons-map
+        header="Annual Emissions of Non Biogenic Carbon Dioxide"
+        parentPlace="country/USA"
+        childPlaceType="State"
+        subscribe="dc-map"
+        variable="Annual_Emissions_CarbonDioxide_NonBiogenic"
+     ></datacommons-map>
+        <datacommons-slider
+        publish="dc-map"
+        variable="Annual_Emissions_CarbonDioxide_NonBiogenic"
+        parentPlace="country/USA"
+        childPlaceType="State"
+    ></datacommons-slider>
+    </div>
+
+    <div class="chart-container">   
+        <datacommons-ranking
+        header="Highest Annual Emissions of Non Biogenic CO2"
+        parentPlace="country/USA"
+        childPlaceType="State"
+        variable="Annual_Emissions_CarbonDioxide_NonBiogenic"
+        showHighest
+        ></datacommons-ranking>
+    </div>
+
+    <div class="chart-container">   
+        <datacommons-ranking
+        header="Lowest Annual Emissions of Non Biogenic CO2"
+        parentPlace="country/USA"
+        childPlaceType="State"
+        variable="Annual_Emissions_CarbonDioxide_NonBiogenic"
+        showLowest
+        ></datacommons-ranking>
+    </div>
+</div>
+
+<br>
+<hr>
+<br>
+
+<div class="section">
+    <div class="chart-container">
+        <datacommons-map
+        header="Annual Emissions of Non Biogenic Methane"
+        parentPlace="country/USA"
+        childPlaceType="State"
+        subscribe="dc-map"
+        variable="Annual_Emissions_Methane_NonBiogenic"
+     ></datacommons-map>
+        <datacommons-slider
+        publish="dc-map"
+        variable="Annual_Emissions_Methane_NonBiogenic"
+        parentPlace="country/USA"
+        childPlaceType="State"
+    ></datacommons-slider>
+    </div>
+
+    <div class="chart-container">   
+        <datacommons-ranking
+        header="Highest Annual Emissions of Non Biogenic Methane"
+        parentPlace="country/USA"
+        childPlaceType="State"
+        variable="Annual_Emissions_Methane_NonBiogenic"
+        showHighest
+        ></datacommons-ranking>
+    </div>
+
+    <div class="chart-container">   
+        <datacommons-ranking
+        header="Lowest Annual Emissions of Non Biogenic Methane"
+        parentPlace="country/USA"
+        childPlaceType="State"
+        variable="Annual_Emissions_Methane_NonBiogenic"
+        showLowest
+        ></datacommons-ranking>
+    </div>
+</div>
+
+<br>
+<hr>
+<br>
+
+<h2> Climate Hazards </h2>
+<h4>Climate Hazard Damages</h4>
+<p>Climate hazards are atmospheric events that cause damage to human settlements or the natural 
+    environment. These events include thunderstorms, cyclones, earthquakes, hail, snow, and drought 
+    to name a few. In some places of the U.S. there are insurance agencies that are beginning to 
+    recognize the costs of climate change and are integrating that into their processes. The 
+    following data helps visualize the monetary response to flooding hazards in the United States, 
+    sourced through the Federal Emergency Management Agency (FEMA)’s National Flood Insurance 
+    Program.</p>
+
+<datacommons-line
+    header="Settlement amount of natural hazard insurance for STRUCTURE DAMAGE within the 100 year flood zone (FEMA)"
+    place="country/USA"
+    variables="SettlementAmount_NaturalHazardInsurance_FEMAHighRiskFloodZone_BuildingStructure_FloodEvent"
+    colors="green"
+></datacommons-line>
+<br>
+<hr>
+<br>
+<datacommons-line
+    header="Settlement amount of natural hazard insurance for HOUSE CONTENT within the 100 year flood zone (FEMA)"
+    place="country/USA"
+    variables="SettlementAmount_NaturalHazardInsurance_FEMAHighRiskFloodZone_BuildingContents_FloodEvent"
+    colors="green"
+></datacommons-line>
+<br>
+<hr>
+<br>
+
+<h2> Wildfires </h2>
+<p>Here we want to highlight what different types of data may be available for a specific climate hazard, the wildfire. 
+    Wildfires can cover wide expanses of land relatively quickly based on factors like wind speed and dry forest litter 
+    abundance. These events not only impact the immediate area, but can impact human health downwind due to ash/smoke 
+    traveling through the air.</p>
+
+    <div class="section">
+        <div class="chart-container">
+            <datacommons-map
+            header="Annual Amount of Emissions: Wildfire, Non Biogenic Emission Source, PM 2.5"
+            parentPlace="country/USA"
+            childPlaceType="State"
+            subscribe="dc-map"
+            variable="Annual_Amount_Emissions_Wildfire_NonBiogenicEmissionSource_PM2.5"
+            ></datacommons-map>
+        <datacommons-slider
+            publish="dc-map"
+            variable="Annual_Amount_Emissions_Wildfire_NonBiogenicEmissionSource_PM2.5"
+            parentPlace="country/USA"
+            childPlaceType="State"
+            ></datacommons-slider>
+        </div>
+    
+        <div class="chart-container">
+            <datacommons-line
+            header="Mean Temperature"
+            place="country/USA"
+            variables="Annual_Amount_Emissions_Wildfire_NonBiogenicEmissionSource_PM2.5"
+            colors="red"
+            ></datacommons-line>
+        </div>
+    </div>
+
+<br>
+<hr>
+<br>
+
+<datacommons-line
+    header="Count of dense Smoke Events"
+    place="country/USA"
+    variables="Count_DenseSmokeEvent"
+    colors="red"
+></datacommons-line>
+
+<br>
+<hr>
+<br>
+
+<datacommons-line
+    header="Count of Fire Event"
+    place="country/USA"
+    variables="Count_FireEvent"
+    colors="red"
+></datacommons-line>
+
+<br>
+<hr>
+<br>
+
+<h4> Marine and Water Hazards </h4>
+<p>Hurricanes and coastal flooding are destructive, and sometimes life threatening events that our 
+    coastal communities face. As storms become more intense due to abundant energy in our atmosphere,
+     coastal populations face the decision whether to retreat or to armor their coastline. Datasets 
+     like the following track these water hazards to enable us to make better decisions on how to 
+     address incoming storms.</p>
+
+<datacommons-line
+     header="Count of Hurricanes"
+     place="country/USA"
+     variables="Count_HurricaneEvent"
+     colors="red"
+ ></datacommons-line>
+
+ <br>
+ <hr>
+ <br>
+
+ <div class="section">
+    <div class="chart-container">
+        <datacommons-map
+        header="Area of Flood Event"
+        parentPlace="country/USA"
+        childPlaceType="State"
+        subscribe="dc-map"
+        variable="Area_FloodEvent"
+     ></datacommons-map>
+        <datacommons-slider
+        publish="dc-map"
+        variable="Area_FloodEvent"
+        parentPlace="country/USA"
+        childPlaceType="State"
+    ></datacommons-slider>
+    </div>
+
+    <div class="chart-container">   
+        <datacommons-ranking
+        header="Highest Area Flood Event"
+        parentPlace="country/USA"
+        childPlaceType="State"
+        variable="Area_FloodEvent"
+        showHighest
+        ></datacommons-ranking>
+    </div>
+
+    <div class="chart-container">   
+        <datacommons-ranking
+        header="Lowest Area Flood Event"
+        parentPlace="country/USA"
+        childPlaceType="State"
+        variable="Area_FloodEvent"
+        showLowest
+        ></datacommons-ranking>
+    </div>
+</div>
+
+<br>
+<hr>
+<br>
+
+<datacommons-line
+     header="Count of Tropical Storms"
+     place="country/USA"
+     variables="Count_TropicalStormEvent"
+     colors="red"
+ ></datacommons-line>
+
+<br>
+<hr>
+<br>
+
+<datacommons-line
+     header="Count of Coastal Floods"
+     place="country/USA"
+     variables="Count_CoastalFloodEvent"
+     colors="red"
+ ></datacommons-line>
+
+<br>
+<hr>
+<br>
+
+<h4> Atmospheric Events and Hazards </h4>
+<p>Climate change plays a key role in impacting severe weather events worldwide. As our atmosphere 
+    traps more heat, extreme weather events will become more likely. The American Meteorological 
+    Society released their annual report in 2021 highlighting the occurrence of "compound events" 
+    where two weather events happen simultaneously. An example of this would be severe heat coupled 
+    with lack of rainfall. This weather coupling is a recipe for dry forest litter, which can lead 
+    to severe forest fires.</p>
+
+<div class="section">
+    <div class="chart-container">
+        <datacommons-line
+        header="Excessive Heat (105° F or greater)"
+        place="country/USA"
+        variables="Count_ExcessiveHeatEvent"
+        colors="red"
+    ></datacommons-line>
+    </div>
+
+    <div class="chart-container">
+    <datacommons-line
+     header="Count of Heat Waves"
+     place="country/USA"
+     variables="Count_HeatEvent"
+     colors="red"
+    ></datacommons-line>
+    </div>
+</div>
+
+<br>
+<hr>
+<br>
+
+<div class="section">
+    <div class="chart-container">
+        <datacommons-line
+        header="Extreme Cold Wind Chill Events"
+        place="country/USA"
+        variables="Count_ExtremeColdWindChillEvent"
+        colors="purple"
+    ></datacommons-line>
+    </div>
+
+    <div class="chart-container">
+    <datacommons-line
+     header="Count of Heavy Rain Events"
+     place="country/USA"
+     variables="Count_HeavyRainEvent"
+     colors="blue"
+    ></datacommons-line>
+    </div>
+</div>
+
+<br>
+<hr>
+<br>
+
+<datacommons-line
+header="Count of Drought Events"
+place="country/USA"
+variables="Count_DroughtEvent"
+colors="blue"
+></datacommons-line>
+
+
+</body>
+</html>
