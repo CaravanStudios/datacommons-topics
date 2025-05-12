@@ -18,7 +18,37 @@
             width: 100%; /* Let the container control width */
           }
         </style>
-      </head>
+        <script>
+          // Parse query string parameters
+          function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+              place: params.get('place') || 'country/USA',
+              childPlaceType: params.get('childPlaceType') || 'State',
+            };
+          }
+
+          // Update attributes of datacommons components
+          function updateDataCommonsComponents() {
+            const { place, childPlaceType } = getQueryParams();
+            const components = document.querySelectorAll('datacommons-map, datacommons-slider, datacommons-ranking, datacommons-line');
+            components.forEach((component) => {
+              if (component.hasAttribute('parentPlace')) {
+                component.setAttribute('parentPlace', place);
+              }
+              if (component.hasAttribute('place')) {
+                component.setAttribute('place', place);
+              }
+              if (component.hasAttribute('childPlaceType')) {
+                component.setAttribute('childPlaceType', childPlaceType);
+              }
+            });
+          }
+
+          // Run the update function after the DOM is loaded
+          document.addEventListener('DOMContentLoaded', updateDataCommonsComponents);
+        </script>
+    </head>
 
 <body>
 <h1> Data Commons for Climate Change Organizations </h1>
@@ -59,7 +89,7 @@
 
     <div class="chart-container">   
         <datacommons-ranking
-        header="US States with the Highest Percentage of Forest"
+        header="Places with the Highest Percentage of Forest"
         parentPlace="country/USA"
         childPlaceType="State"
         variable="LandCoverFraction_Forest"
@@ -69,7 +99,7 @@
 
     <div class="chart-container">   
         <datacommons-ranking
-        header="US States with the Lowest Percentage of Forest"
+        header="Places with the Lowest Percentage of Forest"
         parentPlace="country/USA"
         childPlaceType="State"
         variable="LandCoverFraction_Forest"
@@ -101,7 +131,7 @@
 
     <div class="chart-container">
         <datacommons-ranking
-        header="US States with the Highest Percentage of Water Coverage"
+        header="Places with the Highest Percentage of Water Coverage"
         parentPlace="country/USA"
         childPlaceType="State"
         variable="LandCoverFraction_PermanentWater"
@@ -111,7 +141,7 @@
 
     <div class="chart-container">
         <datacommons-ranking
-        header="US States with the Lowest Percentage of Water Coverage"
+        header="Places with the Lowest Percentage of Water Coverage"
         parentPlace="country/USA"
         childPlaceType="State"
         variable="LandCoverFraction_PermanentWater"
@@ -143,7 +173,7 @@
 
     <div class="chart-container">
         <datacommons-ranking
-        header="US States with the Highest Percentage of Seasonal Water Coverage"
+        header="Places with the Highest Percentage of Seasonal Water Coverage"
         parentPlace="country/USA"
         childPlaceType="State"
         variable="LandCoverFraction_SeasonalWater"
@@ -153,7 +183,7 @@
 
     <div class="chart-container">
         <datacommons-ranking
-        header="US States with the Lowest Percentage of Seasonal Water Coverage"
+        header="Places with the Lowest Percentage of Seasonal Water Coverage"
         parentPlace="country/USA"
         childPlaceType="State"
         variable="LandCoverFraction_SeasonalWater"
@@ -192,7 +222,7 @@
     
         <div class="chart-container">
             <datacommons-ranking
-            header="US States with the Highest Rate of Water Withdrawal"
+            header="Places with the Highest Rate of Water Withdrawal"
             parentPlace="country/USA"
             childPlaceType="State"
             variable="WithdrawalRate_Water"
@@ -202,7 +232,7 @@
     
         <div class="chart-container">
             <datacommons-ranking
-            header="US States with the Lowest Rate of Water Withdrawal"
+            header="Places with the Lowest Rate of Water Withdrawal"
             parentPlace="country/USA"
             childPlaceType="State"
             variable="WithdrawalRate_Water"
@@ -394,7 +424,7 @@
     to name a few. In some places of the U.S. there are insurance agencies that are beginning to 
     recognize the costs of climate change and are integrating that into their processes. The 
     following data helps visualize the monetary response to flooding hazards in the United States, 
-    sourced through the Federal Emergency Management Agency (FEMA)’s National Flood Insurance 
+    sourced through the Federal Emergency Management Agency (FEMA)ʼs National Flood Insurance 
     Program.</p>
 
 <datacommons-line
